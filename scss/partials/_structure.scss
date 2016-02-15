@@ -1,0 +1,25 @@
+section {
+  width: 50em;
+  margin: auto;
+
+  // Small screens
+  @media only screen
+  and (max-width: 50em) {
+    width: 80vw;
+  }
+
+}
+
+.backtotop {
+  width: 36px;
+  height: 36px;
+  position: fixed;
+  display: block;
+  right: 1em;
+  bottom: 1em;
+  background-image: $sprite;
+  background-repeat: no-repeat;
+  background-position: 50% -235px;
+  z-index: 120;
+  text-indent: -9999px;
+}

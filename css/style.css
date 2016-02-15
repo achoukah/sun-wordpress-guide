@@ -1,0 +1,484 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Headline Font */
+@font-face {
+  font-family: "Overpass" url("../fonts/Overpass-ExtraLight.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Overpass" url("../fonts/Overpass-ExtraLight-Italic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Overpass" url("../fonts/Overpass-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Overpass" url("../fonts/Overpass-Light-Italic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Overpass" url("../fonts/Overpass-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Overpass" url("../fonts/Overpass-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Overpass" url("../fonts/Overpass-Bold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Overpass" url("../fonts/Overpass-Bold-Italic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* BASE STYLE */
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass", sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 2.074em;
+}
+
+h2 {
+  font-size: 1.728em;
+}
+
+h3 {
+  font-size: 1.44em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.833em;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+p {
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+article a {
+  color: #c00;
+  text-decoration: none;
+  box-shadow: inset 0 -0.1em rgba(204, 0, 0, 0.5);
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+  padding: 0.15em 0;
+}
+
+article a:hover {
+  box-shadow: inset 0 -2em rgba(204, 0, 0, 0.1);
+}
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  width: 100vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(26, 26, 26, 0.5);
+  font-family: "Roboto", sans-serif;
+  background-image: url(//lorempixel.com/1000/1000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  top: 0;
+  background: -webkit-linear-gradient(top, black 0%, transparent 18%, transparent 27%, transparent 62%, black 100%);
+  background: linear-gradient(to bottom, black 0%, transparent 18%, transparent 27%, transparent 62%, black 100%);
+}
+
+header hgroup {
+  padding-top: 8em;
+  padding-left: 0;
+  border: 0;
+  z-index: 100;
+}
+
+header hgroup::before {
+  content: '';
+  width: 200px;
+  height: 80px;
+  background: #c00;
+  display: block;
+  margin: 1em auto;
+  background-image: url(../img/sol-sprite.svg);
+  background-repeat: no-repeat;
+  background-position: 50% -92px;
+}
+
+header h1, header h2 {
+  text-align: center;
+  margin: 0 auto 0.2em;
+  text-shadow: 0 1px 0 rgba(26, 26, 26, 0.5);
+  color: white;
+}
+
+header h1 {
+  font-weight: 600;
+}
+
+header .more {
+  background-image: url(../img/sol-sprite.svg);
+  background-position: 50% -175px;
+  display: block;
+  width: 52px;
+  height: 52px;
+  content: '';
+  margin: auto;
+  position: absolute;
+  bottom: 1.5em;
+  left: calc(50% - 24px);
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+header .more:hover {
+  bottom: 1em;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+nav {
+  position: fixed;
+  padding: 0.5em 1em;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: thick solid #c00;
+  box-shadow: 0 -1em 2em 2em rgba(26, 26, 26, 0.2);
+  z-index: 10;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+nav li {
+  padding: 0.5em;
+}
+
+nav a {
+  color: #c00;
+  text-decoration: none;
+  box-shadow: none;
+  padding: 0.5em;
+}
+
+nav a:hover {
+  box-shadow: none;
+}
+
+section {
+  width: 50em;
+  margin: auto;
+}
+
+@media only screen and (max-width: 50em) {
+  section {
+    width: 80vw;
+  }
+}
+
+.backtotop {
+  width: 36px;
+  height: 36px;
+  position: fixed;
+  display: block;
+  right: 1em;
+  bottom: 1em;
+  background-image: url(../img/sol-sprite.svg);
+  background-repeat: no-repeat;
+  background-position: 50% -235px;
+  z-index: 120;
+  text-indent: -9999px;
+}
+
+section {
+  padding-top: 1em;
+}
+
+article {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: medium solid rgba(26, 26, 26, 0.5);
+  margin: 3em 0;
+  padding: 2em 0;
+}
+
+@media only screen and (max-width: 50em) {
+  article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+article .page-title {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 0;
+      -ms-flex: 1 0 0;
+          flex: 1 0 0;
+}
+
+article .page-title h5 {
+  color: #c00;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: thin solid rgba(204, 0, 0, 0.5);
+}
+
+article .page-title h3 {
+  font-weight: 600;
+}
+
+article .page-descr {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 0;
+      -ms-flex: 1 0 0;
+          flex: 1 0 0;
+}
+
+article p {
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+article figure {
+  margin-bottom: 1em;
+}
+
+article figure img {
+  display: block;
+}
+
+article figure figcaption {
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(26, 26, 26, 0.8);
+  font-size: 0.833em;
+  padding: 0.5em 0.5em 0.75em;
+  background-color: rgba(26, 26, 26, 0.1);
+}
+
+article figure figcaption strong {
+  font-style: normal;
+  text-transform: uppercase;
+  color: #990000;
+}
+
+article figure figcaption strong::after {
+  content: ': ';
+}
+
+article ul {
+  margin-bottom: 1em;
+}
+
+article ul > li::before {
+  content: '';
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 100%;
+  margin-right: .5em;
+  background-color: #c00;
+  top: -0.1em;
+}
+
+article ol {
+  margin-bottom: 1em;
+  counter-reset: li;
+  /* Initiate a counter */
+  list-style: none;
+  /* Remove default numbering */
+}
+
+article ol > li::before {
+  content: counter(li);
+  /* Use the counter as content */
+  counter-increment: li;
+  /* Increment the counter by 1 */
+  display: inline-block;
+  width: 1.5em;
+  padding: 0.2em;
+  margin-right: .5em;
+  text-align: center;
+  color: white;
+  background-color: rgba(26, 26, 26, 0.8);
+}
+
+article li {
+  margin: 0 0 0.5em 1em;
+  line-height: 1.5;
+  position: relative;
+  /* Create a positioning context */
+  list-style: none;
+  /* Disable the normal item numbering */
+  margin-left: 0;
+}
+
+article li::before {
+  content: '';
+  display: inline-block;
+  margin-right: .5em;
+  background-color: #c00;
+  position: relative;
+  top: -0.1em;
+}
+
+footer {
+  font-size: 0.833em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  width: 100vw;
+  padding: 2em;
+  background-color: rgba(26, 26, 26, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+}
+/*# sourceMappingURL=style.css.map */

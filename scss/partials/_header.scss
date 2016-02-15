@@ -1,0 +1,75 @@
+header {
+  width: 100vw;
+  height: 100vh;
+  background: $bk-tr-5;
+  font-family: $body-font;
+  background-image: url(//lorempixel.com/1000/1000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  // border-bottom: 5em solid $bk-tr-3;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0) 27%,rgba(0,0,0,0) 62%,rgba(0,0,0,1) 100%);
+  }
+
+  &:hover {
+
+    &::after {
+
+    }
+  }
+  hgroup {
+    padding-top: 8em;
+    padding-left: 0;
+    border: 0;
+    z-index: 100;
+
+    &::before {
+      content: '';
+      width: 200px;
+      height: 80px;
+      background: $rd-md;
+      display: block;
+      margin: 1em auto;
+      background-image: $sprite;
+      background-repeat: no-repeat;
+      background-position: 50% -92px;
+    }
+  }
+  h1, h2 {
+    text-align: center;
+
+    margin: 0 auto .2em;
+    text-shadow: 0 1px 0 $bk-tr-5;
+    color: $wh-lt;
+  }
+  h1 {
+    font-weight: 600;
+  }
+  .more {
+    background-image: $sprite;
+    background-position: 50% -175px;
+    display: block;
+    width: 52px;
+    height: 52px;
+    content: '';
+    margin: auto;
+    position: absolute;
+    bottom: 1.5em;
+    left: calc(50% - 24px);
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+
+    &:hover {
+      bottom: 1em;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}

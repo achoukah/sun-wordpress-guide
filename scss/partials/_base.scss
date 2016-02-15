@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.container {
+  width: 100vw;
+  font-family: $body-font;
+  font-weight: 100;
+  flex: 1;
+}
+
+
