@@ -5,25 +5,135 @@ nav {
   background-color: $wh-tr-8;
   border-bottom: thick solid $rd-md;
   box-shadow: 0 -1em 2em 2em $bk-tr-2;
-  z-index: 10;
+  z-index: 20;
+  height: auto;
+
+  // Small screens
+  @media only screen
+  and (max-width: 50em) {
+  background-color: $wh-lt;
+  }
+
+  .nav-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+
+    &:checked {
+
+      + label {
+
+        // Small screens
+        @media only screen
+        and (max-width: 50em) {
+          display: block;
+        }
+
+        + .navigation {
+
+          // Small screens
+          @media only screen
+          and (max-width: 50em) {
+            overflow: scroll;
+            min-height: 60vh;
+            max-height: auto;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    + label {
+      display: none;
+
+      // Small screens
+      @media only screen
+      and (max-width: 50em) {
+        display: block;
+      }
+
+      + .navigation {
+
+        // Small screens
+        @media only screen
+        and (max-width: 50em) {
+          opacity: 0;
+          overflow: hidden;
+          min-height: 4em;
+          max-height: 4em;
+          display: block;
+          transition: all .2s ease-in-out;
+        }
+      }
+    }
+  }
+  label[for="nav-trigger"] {
+      position: fixed;
+      z-index: 12;
+      width: 3em;
+      height: 3em;
+      cursor: pointer;
+      background-image: $sprite;
+      background-position: 50% -275px;
+      background-size: auto;
+      background-color: $rd-md;
+      right: 1em;
+      top: 1em;
+  }
+
+
 
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+
+    // Small screens
+    @media only screen
+    and (max-width: 50em) {
+      display: block;
+    }
+
 
   }
 
   li {
-    padding: 0.5em;
+    // padding-left: 0.5em;
+    font-weight: 400;
+    border-left: solid thin $bk-tr-1;
+
+    // Small screens
+    @media only screen
+    and (max-width: 50em) {
+      border: none;
+    }
+
+    &:first-child {
+      border: none;
+    }
   }
   a {
     color: $rd-md;
     text-decoration: none;
     box-shadow: none;
-    padding: 0.5em;
+    padding: 0.5em 1em;
+    display: inline-block;
 
     &:hover {
       box-shadow: none;
     }
   }
 }
+section {
+  // Small screens
+  @media only screen
+  and (max-width: 50em) {
+    // min-width: 100%;
+    // min-height: 100%;
+    // background-color: #fff;
+    // position: relative;
+    // top: 0;
+    // bottom: 100%;
+    // left: 0;
+    // z-index: 1;
+  }
+}
+
+

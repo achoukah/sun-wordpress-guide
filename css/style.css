@@ -162,16 +162,16 @@ p {
 }
 
 article a {
-  color: #c00;
+  color: #e92129;
   text-decoration: none;
-  box-shadow: inset 0 -0.1em rgba(204, 0, 0, 0.5);
+  box-shadow: inset 0 -0.1em rgba(233, 33, 41, 0.5);
   -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
   padding: 0.15em 0;
 }
 
 article a:hover {
-  box-shadow: inset 0 -2em rgba(204, 0, 0, 0.1);
+  box-shadow: inset 0 -2em rgba(233, 33, 41, 0.1);
 }
 
 body {
@@ -230,7 +230,7 @@ header hgroup::before {
   content: '';
   width: 200px;
   height: 80px;
-  background: #c00;
+  background: #e92129;
   display: block;
   margin: 1em auto;
   background-image: url(../img/sol-sprite.svg);
@@ -276,9 +276,72 @@ nav {
   padding: 0.5em 1em;
   width: 100vw;
   background-color: rgba(255, 255, 255, 0.8);
-  border-bottom: thick solid #c00;
+  border-bottom: thick solid #e92129;
   box-shadow: 0 -1em 2em 2em rgba(26, 26, 26, 0.2);
-  z-index: 10;
+  z-index: 20;
+  height: auto;
+}
+
+@media only screen and (max-width: 50em) {
+  nav {
+    background-color: white;
+  }
+}
+
+nav .nav-trigger {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+@media only screen and (max-width: 50em) {
+  nav .nav-trigger:checked + label {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  nav .nav-trigger:checked + label + .navigation {
+    overflow: scroll;
+    min-height: 60vh;
+    max-height: auto;
+    opacity: 1;
+  }
+}
+
+nav .nav-trigger + label {
+  display: none;
+}
+
+@media only screen and (max-width: 50em) {
+  nav .nav-trigger + label {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  nav .nav-trigger + label + .navigation {
+    opacity: 0;
+    overflow: hidden;
+    min-height: 4em;
+    max-height: 4em;
+    display: block;
+    -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+  }
+}
+
+nav label[for="nav-trigger"] {
+  position: fixed;
+  z-index: 12;
+  width: 3em;
+  height: 3em;
+  cursor: pointer;
+  background-image: url(../img/sol-sprite.svg);
+  background-position: 50% -275px;
+  background-size: auto;
+  background-color: #e92129;
+  right: 1em;
+  top: 1em;
 }
 
 nav ul {
@@ -286,20 +349,39 @@ nav ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 50em) {
+  nav ul {
+    display: block;
+  }
 }
 
 nav li {
-  padding: 0.5em;
+  font-weight: 400;
+  border-left: solid thin rgba(26, 26, 26, 0.1);
+}
+
+@media only screen and (max-width: 50em) {
+  nav li {
+    border: none;
+  }
+}
+
+nav li:first-child {
+  border: none;
 }
 
 nav a {
-  color: #c00;
+  color: #e92129;
   text-decoration: none;
   box-shadow: none;
-  padding: 0.5em;
+  padding: 0.5em 1em;
+  display: inline-block;
 }
 
 nav a:hover {
@@ -313,7 +395,7 @@ section {
 
 @media only screen and (max-width: 50em) {
   section {
-    width: 80vw;
+    width: 100vw;
   }
 }
 
@@ -323,12 +405,26 @@ section {
   position: fixed;
   display: block;
   right: 1em;
-  bottom: 1em;
+  top: 5em;
   background-image: url(../img/sol-sprite.svg);
   background-repeat: no-repeat;
   background-position: 50% -235px;
-  z-index: 120;
+  z-index: 12;
   text-indent: -9999px;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 50em) {
+  .backtotop {
+    top: 8em;
+  }
+}
+
+.backtotop:hover {
+  bottom: 1.5em;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
 }
 
 section {
@@ -364,17 +460,19 @@ article .page-title {
   -webkit-flex: 1 0 0;
       -ms-flex: 1 0 0;
           flex: 1 0 0;
+  padding-right: 1em;
 }
 
 article .page-title h5 {
-  color: #c00;
+  color: #e92129;
   margin-bottom: 0.5em;
-  padding-bottom: 0.5em;
-  border-bottom: thin solid rgba(204, 0, 0, 0.5);
+  padding: 0 3rem 0.5em;
+  border-bottom: thin solid rgba(233, 33, 41, 0.5);
 }
 
 article .page-title h3 {
   font-weight: 600;
+  padding: 0 3rem;
 }
 
 article .page-descr {
@@ -382,6 +480,22 @@ article .page-descr {
   -webkit-flex: 1 0 0;
       -ms-flex: 1 0 0;
           flex: 1 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 1em;
+}
+
+@media only screen and (max-width: 50em) {
+  article .page-descr > *:not(figure) {
+    padding: 0 3em;
+  }
 }
 
 article p {
@@ -391,10 +505,15 @@ article p {
 
 article figure {
   margin-bottom: 1em;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 0;
+      -ms-flex: 0 0 0;
+          flex: 0 0 0;
 }
 
 article figure img {
   display: block;
+  width: 100%;
 }
 
 article figure figcaption {
@@ -409,7 +528,7 @@ article figure figcaption {
 article figure figcaption strong {
   font-style: normal;
   text-transform: uppercase;
-  color: #990000;
+  color: #c4131a;
 }
 
 article figure figcaption strong::after {
@@ -420,6 +539,12 @@ article ul {
   margin-bottom: 1em;
 }
 
+@media only screen and (max-width: 50em) {
+  article ul {
+    padding: 0 3em;
+  }
+}
+
 article ul > li::before {
   content: '';
   display: inline-block;
@@ -427,7 +552,7 @@ article ul > li::before {
   height: 0.6em;
   border-radius: 100%;
   margin-right: .5em;
-  background-color: #c00;
+  background-color: #e92129;
   top: -0.1em;
 }
 
@@ -467,7 +592,7 @@ article li::before {
   content: '';
   display: inline-block;
   margin-right: .5em;
-  background-color: #c00;
+  background-color: #e92129;
   position: relative;
   top: -0.1em;
 }
