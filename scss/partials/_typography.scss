@@ -1,3 +1,7 @@
+/*------------------------------------*\
+    TYPOGRAPHY
+\*------------------------------------*/
+
 /* HEADLINE FONT */
 
   @font-face {
@@ -63,9 +67,6 @@ html {
   font-size: 16px;
   line-height: 1.5;
 }
-hgroup {
-
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $head-font;
@@ -102,9 +103,8 @@ em {
 
 hgroup {
 
-  // Small screens
-  @media only screen
-  and (max-width: 50em) {
+
+  @include media($mobile) {
     padding: 0;
     width: 100vw;
     margin-left: 0;
@@ -115,7 +115,7 @@ hgroup {
     color: $rd-md;
     margin-bottom: 0.5em;
     padding: 0 0 0.5em;
-    border-bottom: thin solid $rd-tr-5;
+    border-bottom: thick solid $rd-tr-8;
 
   }
   h3 {

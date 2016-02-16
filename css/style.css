@@ -62,6 +62,18 @@ table {
   border-spacing: 0;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/*------------------------------------*    TYPOGRAPHY
+\*------------------------------------*/
 /* HEADLINE FONT */
 @font-face {
   font-family: "Overpass" url("../fonts/Overpass-ExtraLight.ttf") format("truetype");
@@ -156,7 +168,7 @@ em {
   font-style: italic;
 }
 
-@media only screen and (max-width: 50em) {
+@media screen and (max-width: 50em) {
   hgroup {
     padding: 0;
     width: 100vw;
@@ -169,7 +181,7 @@ hgroup h5 {
   color: #e92129;
   margin-bottom: 0.5em;
   padding: 0 0 0.5em;
-  border-bottom: thin solid rgba(233, 33, 41, 0.5);
+  border-bottom: thick solid rgba(233, 33, 41, 0.8);
 }
 
 hgroup h3 {
@@ -421,8 +433,15 @@ nav a:hover {
 }
 
 section {
-  width: 50em;
-  margin: auto;
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 @media only screen and (max-width: 50em) {
@@ -463,25 +482,110 @@ section {
   padding-top: 5em;
 }
 
-figure {
-  margin-bottom: 1em;
-  min-width: 50%;
-  -webkit-box-ordinal-group: 0;
-  -webkit-order: -1;
-      -ms-flex-order: -1;
-          order: -1;
+article {
+  float: left;
+  display: block;
+  margin-right: 16.0363113405%;
+  width: 100%;
+  position: relative;
 }
 
-@media only screen and (max-width: 50em) {
+article:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 50em) {
+  article {
+    float: left;
+    display: block;
+    margin-right: 16.0363113405%;
+    width: 216.0363113405%;
+  }
+  article:last-child {
+    margin-right: 0;
+  }
+}
+
+article hgroup {
+  float: left;
+  display: block;
+  margin-right: 16.0363113405%;
+  width: 100%;
+  margin-left: 0%;
+  padding: 0;
+}
+
+article hgroup:last-child {
+  margin-right: 0;
+}
+
+article hgroup h5 {
+  border-bottom: thick solid rgba(233, 33, 41, 0.8);
+  margin-bottom: 0.5em;
+  padding: 0 0 0.5em;
+}
+
+@media screen and (max-width: 50em) {
+  article hgroup h5 {
+    padding: 0 3rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  article hgroup h3 {
+    padding: 0 3rem;
+  }
+}
+
+article > * {
+  float: left;
+  display: block;
+  margin-right: 16.0363113405%;
+  width: 41.9818443298%;
+  margin-left: 58.0181556702%;
+}
+
+article > *:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 50em) {
+  article > * {
+    float: left;
+    display: block;
+    margin-right: 16.0363113405%;
+    width: -16.0363113405%;
+    margin-left: 0%;
+    padding: 0 3em;
+  }
+  article > *:last-child {
+    margin-right: 0;
+  }
+}
+
+figure {
+  margin-bottom: 1em;
+  margin-left: 0%;
+  position: absolute;
+  top: 6em;
+  left: 0;
+  height: 100%;
+}
+
+@media screen and (max-width: 50em) {
   figure {
-    -webkit-box-ordinal-group: 1;
-    -webkit-order: 0;
-        -ms-flex-order: 0;
-            order: 0;
     width: 100vw;
     margin: 0 0 2rem;
     padding: 0;
+    position: relative;
+    top: 0;
   }
+}
+
+figure::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 figure img {
@@ -547,12 +651,21 @@ article ol {
   padding: 1em;
   margin-bottom: 1em;
   counter-reset: li;
-  /* Initiate a counter */
   list-style: none;
-  /* Remove default numbering */
-  border: thin solid rgba(26, 26, 26, 0.2);
-  background: rgba(26, 26, 26, 0.1);
   position: relative;
+}
+
+@media screen and (max-width: 50em) {
+  article ol {
+    float: left;
+    display: block;
+    margin-right: 16.0363113405%;
+    width: 100%;
+    padding: 0 3em;
+  }
+  article ol:last-child {
+    margin-right: 0;
+  }
 }
 
 article ol > li {

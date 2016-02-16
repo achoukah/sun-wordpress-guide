@@ -1,6 +1,10 @@
 @import 'partials/variables';
 @import 'partials/reset';
 
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "grid-settings";
+
 @import 'partials/typography';
 
 @import 'partials/base';

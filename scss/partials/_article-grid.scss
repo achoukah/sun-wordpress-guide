@@ -2,24 +2,47 @@ section {
   padding-top: 5em;
 }
 article {
+  @include span-columns(2);
+  position: relative;
 
+  @include media($mobile) { // As defined in _grid-settings.scss
+    @include span-columns(4);
+  }
 
 
 
   hgroup {
-
+    @include span-columns(2 of 2);
+    @include shift(0 of 2);
+    padding: 0;
     h5 {
+      border-bottom: thick solid $rd-tr-8;
+      margin-bottom: 0.5em;
+      padding: 0 0 0.5em;
 
-
+      @include media($mobile) {
+        padding: 0 3rem 0.5rem;
+      }
     }
     h3 {
+
+
+      @include media($mobile) {
+        padding: 0 3rem;
+      }
 
     }
   }
 
   > * {
+    @include span-columns(1 of 2);
+    @include shift(1 of 2);
 
-
+    @include media($mobile) { // As defined in _grid-settings.scss
+      @include span-columns(0 of 2);
+      @include shift(0 of 2);
+      padding: 0 3em;
+    }
 
   }
   p {

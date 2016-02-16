@@ -1,16 +1,25 @@
 figure {
   margin-bottom: 1em;
-  min-width: 50%;
-  order: -1;
+  @include shift(0 of 2);
+  position: absolute;
+  top: 6em;
+  left: 0;
+  height: 100%;
 
-  // Small screens
-  @media only screen
-  and (max-width: 50em) {
-    order: 0;
+  @include media($mobile) {
     width: 100vw;
     margin: 0 0 2rem;
     padding: 0;
+    position: relative;
+    top: 0;
   }
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+
+  }
+
   img {
     display: block;
     width: 100%;

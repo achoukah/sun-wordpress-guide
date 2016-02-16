@@ -1,6 +1,5 @@
 section {
-  width: 50em;
-  margin: auto;
+  @include outer-container;
 
   // Small screens
   @media only screen
