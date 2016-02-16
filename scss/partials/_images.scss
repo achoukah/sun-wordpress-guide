@@ -1,0 +1,50 @@
+figure {
+  margin-bottom: 1em;
+  min-width: 50%;
+  order: -1;
+
+  // Small screens
+  @media only screen
+  and (max-width: 50em) {
+    order: 0;
+    width: 100vw;
+    margin: 0 0 2rem;
+    padding: 0;
+  }
+  img {
+    display: block;
+    width: 100%;
+    // Small screens
+
+    @media only screen
+    and (max-width: 50em) {
+      order: 0;
+      width: 100vw;
+    }
+  }
+  figcaption {
+    font-style: italic;
+    font-weight: 400;
+    color: $bk-tr-8;
+    font-size: 0.833em;
+    padding: 0.5em 0.5em 0.75em;
+    background-color: $bk-tr-1;
+
+    // Small screens
+    @media only screen
+    and (max-width: 50em) {
+      order: 0;
+      width: 100vw;
+    }
+
+    strong {
+      font-style: normal;
+      text-transform: uppercase;
+      color: $rd-dk;
+
+      &::after {
+        content: ': ';
+      }
+    }
+  }
+}

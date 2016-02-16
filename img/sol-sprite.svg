@@ -16,10 +16,16 @@
                 <path d="M17.8953488,0 C8.0081686,0 0,8.0081686 0,17.8953488 C0,27.7825291 8.0081686,35.7906977 17.8953488,35.7906977 C27.7825291,35.7906977 35.7906977,27.7825291 35.7906977,17.8953488 C35.7906977,8.0081686 27.7825291,0 17.8953488,0 L17.8953488,0 Z" id="Path" fill="#E92129" sketch:type="MSShapeGroup"></path>
                 <path d="M13.4215116,4.47383721 L22.369186,4.47383721 L22.369186,17.8953488 L31.3168605,17.8953488 L17.8953488,31.3168605 L4.47383721,17.8953488 L13.4215116,17.8953488 L13.4215116,4.47383721 L13.4215116,4.47383721 Z" id="Path" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
             </g>
-            <g id="nav" sketch:type="MSLayerGroup" transform="translate(68.000000, 288.000000)" fill="#FFFFFF">
-                <rect id="Rectangle-1" sketch:type="MSShapeGroup" x="0" y="0" width="26" height="4"></rect>
-                <rect id="Rectangle-1-Copy" sketch:type="MSShapeGroup" x="0" y="9" width="26" height="4"></rect>
-                <rect id="Rectangle-1-Copy-2" sketch:type="MSShapeGroup" x="0" y="18" width="26" height="4"></rect>
+            <g id="hamburger" sketch:type="MSLayerGroup" transform="translate(68.000000, 288.000000)" fill="#FFFFFF">
+                <g id="bar" transform="translate(0.000000, 18.000000)" sketch:type="MSShapeGroup">
+                    <rect id="Rectangle-1-Copy-2" x="0" y="0" width="26" height="4" rx="2"></rect>
+                </g>
+                <g id="bar-copy" transform="translate(0.000000, 9.000000)" sketch:type="MSShapeGroup">
+                    <rect id="Rectangle-1-Copy-2" x="0" y="0" width="26" height="4" rx="2"></rect>
+                </g>
+                <g id="bar-copy-2" sketch:type="MSShapeGroup">
+                    <rect id="Rectangle-1-Copy-2" x="0" y="0" width="26" height="4" rx="2"></rect>
+                </g>
             </g>
         </g>
     </g>

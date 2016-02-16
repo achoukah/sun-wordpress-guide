@@ -1,0 +1,81 @@
+article{
+  ul {
+    margin-bottom: 1em;
+
+    // Small screens
+    @media only screen
+    and (max-width: 50em) {
+      // padding: 0 3em;
+    }
+
+    > li {
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 0.6em;
+        height: 0.6em;
+        border-radius: 100%;
+        margin-right: .5em;
+        background-color: $rd-md;
+        // position: relative;
+        top: -0.1em;
+      }
+    }
+    }
+    ol {
+    padding: 1em;
+    margin-bottom: 1em;
+    counter-reset: li; /* Initiate a counter */
+    list-style: none; /* Remove default numbering */
+    border: thin solid $bk-tr-2;
+    background: $bk-tr-1;
+    position: relative;
+
+
+
+    > li {
+      text-indent: 0;
+      margin: 0 0 0.5em 0;
+      padding: 0.1em 0 0 2.5em;
+      position: relative;
+      background: $bk-tr-2;
+
+      &::before {
+        content:counter(li); /* Use the counter as content */
+        counter-increment:li; /* Increment the counter by 1 */
+        display: inline-block;
+        width: 1.5em;
+        height: 100%;
+        padding: 0.05em 0.2em;
+        margin: 0 0.5em 0 0;
+        text-align: center;
+        color: $wh-lt;
+        background-color: $bk-tr-2;;
+        border-left: medium solid $bk-dk;
+        border-right: medium solid transparent;
+        position: absolute;
+        left: 0em;
+        top: 0em;
+      }
+      &:nth-child(even) {
+        background: $bk-tr-1;
+      }
+    }
+  }
+  li {
+    margin: 0 0 0.5em 0;
+    line-height: 1.5;
+    position:relative; /* Create a positioning context */
+    list-style:none; /* Disable the normal item numbering */
+
+  &::before {
+    content: '';
+      display: inline-block;
+      margin-right: .5em;
+      background-color: $rd-md;
+      position: relative;
+      top: -0.1em;
+    }
+  }
+}

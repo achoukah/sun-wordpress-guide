@@ -62,7 +62,7 @@ table {
   border-spacing: 0;
 }
 
-/* Headline Font */
+/* HEADLINE FONT */
 @font-face {
   font-family: "Overpass" url("../fonts/Overpass-ExtraLight.ttf") format("truetype");
   font-weight: 100;
@@ -156,6 +156,27 @@ em {
   font-style: italic;
 }
 
+@media only screen and (max-width: 50em) {
+  hgroup {
+    padding: 0;
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+hgroup h5 {
+  color: #e92129;
+  margin-bottom: 0.5em;
+  padding: 0 0 0.5em;
+  border-bottom: thin solid rgba(233, 33, 41, 0.5);
+}
+
+hgroup h3 {
+  font-weight: 600;
+  padding: 0 0;
+}
+
 p {
   margin-bottom: 1em;
   line-height: 1.5;
@@ -199,10 +220,10 @@ body {
 
 header {
   width: 100vw;
-  height: 100vh;
+  height: 60vh;
   background: rgba(26, 26, 26, 0.5);
   font-family: "Roboto", sans-serif;
-  background-image: url(//lorempixel.com/1000/1000);
+  background-image: url(https://unsplash.it/1000/1000);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -210,7 +231,7 @@ header {
 
 @media only screen and (max-width: 50em) {
   header {
-    height: 60vh;
+    height: 100vh;
   }
 }
 
@@ -218,7 +239,7 @@ header::after {
   content: '';
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 60vh;
   display: block;
   top: 0;
   background: -webkit-linear-gradient(top, black 0%, transparent 18%, transparent 27%, transparent 75%, black 100%);
@@ -227,7 +248,7 @@ header::after {
 
 @media only screen and (max-width: 50em) {
   header::after {
-    height: 60vh;
+    height: 100vh;
   }
 }
 
@@ -439,106 +460,10 @@ section {
 }
 
 section {
-  padding-top: 1em;
+  padding-top: 5em;
 }
 
-article {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-align-content: stretch;
-      -ms-flex-line-pack: stretch;
-          align-content: stretch;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  border-top: medium solid rgba(26, 26, 26, 0.5);
-  margin: 3em 0;
-  padding: 2em 0;
-}
-
-@media only screen and (max-width: 50em) {
-  article {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-article hgroup {
-  padding-right: 1em;
-  -webkit-box-ordinal-group: 0;
-  -webkit-order: -1;
-      -ms-flex-order: -1;
-          order: -1;
-  -webkit-box-flex: 2;
-  -webkit-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-
-@media only screen and (max-width: 50em) {
-  article hgroup {
-    padding-right: 0;
-    width: 100vw;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-article hgroup h5 {
-  color: #e92129;
-  margin-bottom: 0.5em;
-  padding: 0 3rem 0.5em;
-  border-bottom: thin solid rgba(233, 33, 41, 0.5);
-}
-
-article hgroup h3 {
-  font-weight: 600;
-  padding: 0 3rem;
-}
-
-article > * {
-  -webkit-box-flex: 2;
-  -webkit-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  padding-right: 1em;
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
-  -webkit-align-content: stretch;
-      -ms-flex-line-pack: stretch;
-          align-content: stretch;
-}
-
-@media only screen and (max-width: 50em) {
-  article > * {
-    padding-right: 0;
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-article p {
-  margin-bottom: 1em;
-  line-height: 1.5;
-}
-
-article figure {
+figure {
   margin-bottom: 1em;
   min-width: 50%;
   -webkit-box-ordinal-group: 0;
@@ -548,23 +473,24 @@ article figure {
 }
 
 @media only screen and (max-width: 50em) {
-  article figure {
+  figure {
     -webkit-box-ordinal-group: 1;
     -webkit-order: 0;
         -ms-flex-order: 0;
             order: 0;
     width: 100vw;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 0 2rem;
+    padding: 0;
   }
 }
 
-article figure img {
+figure img {
   display: block;
+  width: 100%;
 }
 
 @media only screen and (max-width: 50em) {
-  article figure img {
+  figure img {
     -webkit-box-ordinal-group: 1;
     -webkit-order: 0;
         -ms-flex-order: 0;
@@ -573,7 +499,7 @@ article figure img {
   }
 }
 
-article figure figcaption {
+figure figcaption {
   font-style: italic;
   font-weight: 400;
   color: rgba(26, 26, 26, 0.8);
@@ -583,7 +509,7 @@ article figure figcaption {
 }
 
 @media only screen and (max-width: 50em) {
-  article figure figcaption {
+  figure figcaption {
     -webkit-box-ordinal-group: 1;
     -webkit-order: 0;
         -ms-flex-order: 0;
@@ -592,13 +518,13 @@ article figure figcaption {
   }
 }
 
-article figure figcaption strong {
+figure figcaption strong {
   font-style: normal;
   text-transform: uppercase;
   color: #c4131a;
 }
 
-article figure figcaption strong::after {
+figure figcaption strong::after {
   content: ': ';
 }
 
@@ -618,11 +544,23 @@ article ul > li::before {
 }
 
 article ol {
+  padding: 1em;
   margin-bottom: 1em;
   counter-reset: li;
   /* Initiate a counter */
   list-style: none;
   /* Remove default numbering */
+  border: thin solid rgba(26, 26, 26, 0.2);
+  background: rgba(26, 26, 26, 0.1);
+  position: relative;
+}
+
+article ol > li {
+  text-indent: 0;
+  margin: 0 0 0.5em 0;
+  padding: 0.1em 0 0 2.5em;
+  position: relative;
+  background: rgba(26, 26, 26, 0.2);
 }
 
 article ol > li::before {
@@ -632,21 +570,30 @@ article ol > li::before {
   /* Increment the counter by 1 */
   display: inline-block;
   width: 1.5em;
-  padding: 0.2em;
-  margin-right: .5em;
+  height: 100%;
+  padding: 0.05em 0.2em;
+  margin: 0 0.5em 0 0;
   text-align: center;
   color: white;
-  background-color: rgba(26, 26, 26, 0.8);
+  background-color: rgba(26, 26, 26, 0.2);
+  border-left: medium solid #1a1a1a;
+  border-right: medium solid transparent;
+  position: absolute;
+  left: 0em;
+  top: 0em;
+}
+
+article ol > li:nth-child(even) {
+  background: rgba(26, 26, 26, 0.1);
 }
 
 article li {
-  margin: 0 0 0.5em 1em;
+  margin: 0 0 0.5em 0;
   line-height: 1.5;
   position: relative;
   /* Create a positioning context */
   list-style: none;
   /* Disable the normal item numbering */
-  margin-left: 0;
 }
 
 article li::before {
