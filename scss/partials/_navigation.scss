@@ -19,23 +19,18 @@ nav {
     clip: rect(0, 0, 0, 0);
 
     &:checked {
-
       + label {
-
         // Small screens
         @media only screen
         and (max-width: 50em) {
           display: block;
         }
-
         + .navigation {
-
           // Small screens
           @media only screen
           and (max-width: 50em) {
             overflow: scroll;
-            min-height: 60vh;
-            max-height: auto;
+            max-height: 100vh;
             opacity: 1;
           }
         }
@@ -49,9 +44,7 @@ nav {
       and (max-width: 50em) {
         display: block;
       }
-
       + .navigation {
-
         // Small screens
         @media only screen
         and (max-width: 50em) {
@@ -79,8 +72,6 @@ nav {
       top: 1em;
   }
 
-
-
   ul {
     display: flex;
     justify-content: space-between;
@@ -90,8 +81,6 @@ nav {
     and (max-width: 50em) {
       display: block;
     }
-
-
   }
 
   li {
@@ -104,7 +93,6 @@ nav {
     and (max-width: 50em) {
       border: none;
     }
-
     &:first-child {
       border: none;
     }
@@ -121,19 +109,6 @@ nav {
     }
   }
 }
-section {
-  // Small screens
-  @media only screen
-  and (max-width: 50em) {
-    // min-width: 100%;
-    // min-height: 100%;
-    // background-color: #fff;
-    // position: relative;
-    // top: 0;
-    // bottom: 100%;
-    // left: 0;
-    // z-index: 1;
-  }
-}
+
 
 

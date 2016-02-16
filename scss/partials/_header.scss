@@ -9,6 +9,12 @@ header {
   position: relative;
   // border-bottom: 5em solid $bk-tr-3;
 
+  // Small screens
+  @media only screen
+  and (max-width: 50em) {
+    height: 60vh;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -16,7 +22,13 @@ header {
     height: 100vh;
     display: block;
     top: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0) 27%,rgba(0,0,0,0) 62%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0) 27%,rgba(0,0,0,0) 75%,rgba(0,0,0,1) 100%);
+
+    // Small screens
+    @media only screen
+    and (max-width: 50em) {
+      height: 60vh;
+    }
   }
 
   &:hover {
