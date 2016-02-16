@@ -1,10 +1,10 @@
 figure {
   margin-bottom: 1em;
-  @include shift(0 of 2);
   position: absolute;
-  top: 6em;
-  left: 0;
-  height: 100%;
+  padding: 6em 1em 0 0;
+  @include shift(0 of 2);
+
+  // height: 100%;
 
   @include media($mobile) {
     width: 100vw;
@@ -15,9 +15,13 @@ figure {
   }
   &::after {
     content: '';
-    display: table;
+    display: block;
     clear: both;
-
+  }
+  &:nth-of-type(n+2) {
+    border: thin dashed red;
+    // position: relative;
+    // top: 0;
   }
 
   img {

@@ -4,9 +4,17 @@ section {
   // Small screens
   @media only screen
   and (max-width: 50em) {
-    width: 100vw;
+
   }
 
+}
+article {
+  @include span-columns(2);
+  position: relative;
+
+  @include media($mobile) { // As defined in _grid-settings.scss
+    @include span-columns(1);
+  }
 }
 
 .backtotop {

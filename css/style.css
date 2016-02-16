@@ -168,7 +168,7 @@ em {
   font-style: italic;
 }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 800px) {
   hgroup {
     padding: 0;
     width: 100vw;
@@ -433,7 +433,7 @@ nav a:hover {
 }
 
 section {
-  max-width: 50em;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -444,9 +444,27 @@ section::after {
   display: table;
 }
 
-@media only screen and (max-width: 50em) {
-  section {
-    width: 100vw;
+article {
+  float: left;
+  display: block;
+  margin-right: 16.0363113405%;
+  width: 100%;
+  position: relative;
+}
+
+article:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 800px) {
+  article {
+    float: left;
+    display: block;
+    margin-right: 7.4229703521%;
+    width: 19.432772236%;
+  }
+  article:last-child {
+    margin-right: 0;
   }
 }
 
@@ -480,30 +498,8 @@ section::after {
 
 section {
   padding-top: 5em;
-}
-
-article {
-  float: left;
-  display: block;
-  margin-right: 16.0363113405%;
-  width: 100%;
   position: relative;
-}
-
-article:last-child {
-  margin-right: 0;
-}
-
-@media screen and (max-width: 50em) {
-  article {
-    float: left;
-    display: block;
-    margin-right: 16.0363113405%;
-    width: 216.0363113405%;
-  }
-  article:last-child {
-    margin-right: 0;
-  }
+  top: 0;
 }
 
 article hgroup {
@@ -519,19 +515,25 @@ article hgroup:last-child {
   margin-right: 0;
 }
 
+@media screen and (max-width: 800px) {
+  article hgroup {
+    width: 100vw;
+  }
+}
+
 article hgroup h5 {
   border-bottom: thick solid rgba(233, 33, 41, 0.8);
   margin-bottom: 0.5em;
   padding: 0 0 0.5em;
 }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 800px) {
   article hgroup h5 {
     padding: 0 3rem 0.5rem;
   }
 }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 800px) {
   article hgroup h3 {
     padding: 0 3rem;
   }
@@ -549,7 +551,7 @@ article > *:last-child {
   margin-right: 0;
 }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 800px) {
   article > * {
     float: left;
     display: block;
@@ -557,6 +559,8 @@ article > *:last-child {
     width: -16.0363113405%;
     margin-left: 0%;
     padding: 0 3em;
+    width: 100vw;
+    float: none !important;
   }
   article > *:last-child {
     margin-right: 0;
@@ -565,14 +569,12 @@ article > *:last-child {
 
 figure {
   margin-bottom: 1em;
-  margin-left: 0%;
   position: absolute;
-  top: 6em;
-  left: 0;
-  height: 100%;
+  padding: 6em 1em 0 0;
+  margin-left: 0%;
 }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 800px) {
   figure {
     width: 100vw;
     margin: 0 0 2rem;
@@ -584,8 +586,12 @@ figure {
 
 figure::after {
   content: '';
-  display: table;
+  display: block;
   clear: both;
+}
+
+figure:nth-of-type(n+2) {
+  border: thin dashed red;
 }
 
 figure img {
@@ -655,13 +661,14 @@ article ol {
   position: relative;
 }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 800px) {
   article ol {
     float: left;
     display: block;
     margin-right: 16.0363113405%;
     width: 100%;
     padding: 0 3em;
+    width: 100vw;
   }
   article ol:last-child {
     margin-right: 0;
