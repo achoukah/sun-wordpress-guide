@@ -3,7 +3,7 @@ header {
   height: 60vh;
   background: $bk-tr-5;
   font-family: $body-font;
-  background-image: url(https://unsplash.it/1000/1000);
+  background-image: url(https://unsplash.it/1000/800);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -69,13 +69,13 @@ header {
     background-image: $sprite;
     background-position: 50% -175px;
     display: block;
-    width: 52px;
+    width: 72px;
     height: 52px;
     content: '';
     margin: auto;
     position: absolute;
     bottom: 1.5em;
-    left: calc(50% - 24px);
+    left: calc(50% - 36px);
     transition: all 0.5s ease-in-out;
     z-index: 1;
 

@@ -9,11 +9,11 @@ section {
 
 }
 article {
-  @include span-columns(2);
+  // @include span-columns(2);
   position: relative;
 
   @include media($mobile) { // As defined in _grid-settings.scss
-    @include span-columns(1);
+    // @include span-columns(1);
   }
 }
 
@@ -30,6 +30,10 @@ article {
   z-index: 12;
   text-indent: -9999px;
   transition: all .5s ease-in-out;
+
+  &:hover {
+    top: 4.7em;
+  }
 
   // Small screens
   @media only screen

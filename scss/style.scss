@@ -1,8 +1,6 @@
 @import 'partials/variables';
 @import 'partials/reset';
 
-@import "bourbon/bourbon";
-@import "neat/neat";
 @import "grid-settings";
 
 @import 'partials/typography';
@@ -12,8 +10,8 @@
 @import 'partials/navigation';
 @import 'partials/structure';
 // @import 'partials/article';
-// @import 'partials/article-n';
-@import 'partials/article-grid';
+@import 'partials/article-n';
+// @import 'partials/article-grid';
 @import 'partials/images';
 @import 'partials/lists';
 @import 'partials/footer';
