@@ -241,12 +241,15 @@ header {
   position: relative;
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 50em) {
   header {
     height: 100vh;
   }
 }
 
+=======
+>>>>>>> parent of 3e8ebbf... Navigation
 header::after {
   content: '';
   position: absolute;
@@ -254,6 +257,7 @@ header::after {
   height: 60vh;
   display: block;
   top: 0;
+<<<<<<< HEAD
   background: -webkit-linear-gradient(top, black 0%, transparent 18%, transparent 27%, transparent 75%, black 100%);
   background: linear-gradient(to bottom, black 0%, transparent 18%, transparent 27%, transparent 75%, black 100%);
 }
@@ -262,6 +266,10 @@ header::after {
   header::after {
     height: 100vh;
   }
+=======
+  background: -webkit-linear-gradient(top, black 0%, transparent 18%, transparent 27%, transparent 62%, black 100%);
+  background: linear-gradient(to bottom, black 0%, transparent 18%, transparent 27%, transparent 62%, black 100%);
+>>>>>>> parent of 3e8ebbf... Navigation
 }
 
 header hgroup {
@@ -347,7 +355,8 @@ nav .nav-trigger {
 @media only screen and (max-width: 50em) {
   nav .nav-trigger:checked + label + .navigation {
     overflow: scroll;
-    max-height: 100vh;
+    min-height: 60vh;
+    max-height: auto;
     opacity: 1;
   }
 }
@@ -493,6 +502,7 @@ article {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+<<<<<<< HEAD
   -webkit-align-content: stretch;
       -ms-flex-line-pack: stretch;
           align-content: stretch;
@@ -504,6 +514,8 @@ article {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+=======
+>>>>>>> parent of 3e8ebbf... Navigation
   border-top: medium solid rgba(26, 26, 26, 0.5);
   margin: 3em 0 1em;
   padding: 2em 0 1em;
@@ -519,6 +531,7 @@ article {
   }
 }
 
+<<<<<<< HEAD
 article > * {
   width: 49%;
   max-width: 49%;
@@ -534,11 +547,54 @@ article > * {
 @media only screen and (max-width: 50em) {
   article > * {
     padding: 0 2rem;
+=======
+article .page-title {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 0;
+      -ms-flex: 1 0 0;
+          flex: 1 0 0;
+  padding-right: 1em;
+}
+
+article .page-title h5 {
+  color: #e92129;
+  margin-bottom: 0.5em;
+  padding: 0 3rem 0.5em;
+  border-bottom: thin solid rgba(233, 33, 41, 0.5);
+}
+
+article .page-title h3 {
+  font-weight: 600;
+  padding: 0 3rem;
+}
+
+article .page-descr {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 0;
+      -ms-flex: 1 0 0;
+          flex: 1 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 1em;
+}
+
+@media only screen and (max-width: 50em) {
+  article .page-descr > *:not(figure) {
+    padding: 0 3em;
+>>>>>>> parent of 3e8ebbf... Navigation
   }
 }
 
 figure {
   margin-bottom: 1em;
+<<<<<<< HEAD
   position: absolute;
   padding: 6em 1em 0 0;
   margin-left: 0%;
@@ -552,11 +608,18 @@ figure {
     position: relative;
     top: 0;
   }
+=======
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 0;
+      -ms-flex: 0 0 0;
+          flex: 0 0 0;
+>>>>>>> parent of 3e8ebbf... Navigation
 }
 
 figure::after {
   content: '';
   display: block;
+<<<<<<< HEAD
   clear: both;
 }
 
@@ -577,6 +640,9 @@ figure img {
             order: 0;
     width: 100vw;
   }
+=======
+  width: 100%;
+>>>>>>> parent of 3e8ebbf... Navigation
 }
 
 figure figcaption {
@@ -588,6 +654,7 @@ figure figcaption {
   background-color: rgba(26, 26, 26, 0.1);
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 50em) {
   figure figcaption {
     -webkit-box-ordinal-group: 1;
@@ -599,6 +666,9 @@ figure figcaption {
 }
 
 figure figcaption strong {
+=======
+article figure figcaption strong {
+>>>>>>> parent of 3e8ebbf... Navigation
   font-style: normal;
   text-transform: uppercase;
   color: #c4131a;
@@ -610,6 +680,12 @@ figure figcaption strong::after {
 
 article ul {
   margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 50em) {
+  article ul {
+    padding: 0 3em;
+  }
 }
 
 article ul > li::before {
