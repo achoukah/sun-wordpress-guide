@@ -104,7 +104,7 @@ em {
 hgroup {
 
 
-  @include media($mobile) {
+  @include mobile {
     padding: 0;
     width: 100vw;
     margin-left: 0;

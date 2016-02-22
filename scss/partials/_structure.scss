@@ -1,5 +1,5 @@
 section {
-  @include outer-container;
+  // @include outer-container;
 
   // Small screens
   @media only screen
@@ -9,11 +9,9 @@ section {
 
 }
 article {
-  // @include span-columns(2);
   position: relative;
 
-  @include media($mobile) { // As defined in _grid-settings.scss
-    // @include span-columns(1);
+  @include mobile {
   }
 }
 

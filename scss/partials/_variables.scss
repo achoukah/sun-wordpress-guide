@@ -63,3 +63,13 @@
 // IMAGES
 
   $sprite: url(../img/sol-sprite.svg);
+
+// MIXINS - MEDIA QUERIES
+
+$mobile: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}

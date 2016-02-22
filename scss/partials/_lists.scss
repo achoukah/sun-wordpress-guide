@@ -2,7 +2,7 @@ article{
   ul {
     margin-bottom: 1em;
 
-    @include media($mobile) {
+    @include mobile {
 
     }
 
@@ -28,8 +28,7 @@ article{
       list-style: none;
       position: relative;
 
-      @include media($mobile) {
-        @include span-columns(2 of 2);
+      @include mobile {
         padding: 0 3em;
         width: 100vw;
       }
