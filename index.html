@@ -11,6 +11,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,700italic,400italic,300italic,100italic' rel='stylesheet' type='text/css'>
     <script src="http://img.thesun.co.uk/aidemitlum/archive/02392/jquery_1_7_1_2392697a.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.waypoints/2.0.2/waypoints.js"></script>
 </head>
 
 <body>
@@ -21,8 +22,8 @@
       <input type="checkbox" id="nav-trigger" class="nav-trigger" />
       <label for="nav-trigger"></label>
 
-      <ul class="navigation">
-        <li><a href="#00">00. Contents</a></li>
+      <ul id="navigation">
+        <li class="current" ><a href="#00">00. Contents</a></li>
         <li><a href="#01">01. Introduction</a></li>
         <li><a href="#02">02. Foreword</a></li>
         <li><a href="#03">03. Get started</a></li>
@@ -46,6 +47,7 @@
   </header>
 
   <section id="00">
+
     <article>
 
       <hgroup>
@@ -95,6 +97,10 @@
       </figure>
 
     </article>
+    <figure>
+    <img src="http://lorempixel.com/1600/800" alt="">
+    <figcaption></figcaption>
+  </figure>
   </section>
 
   <section id="01">
@@ -269,6 +275,8 @@
 </div>
 
 <script>
+
+
   $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -284,6 +292,13 @@
   });
 });
 </script>
+
+<script src="js/jquery.nav.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#navigation').onePageNav();
+    });
+  </script>
 
 </body>
 </html>

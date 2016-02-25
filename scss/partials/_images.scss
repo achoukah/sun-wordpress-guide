@@ -14,10 +14,8 @@ figure {
     display: block;
     clear: both;
   }
-  &:nth-of-type(n+2) {
-    // border: thin dashed red;
-    // position: relative;
-    // top: 0;
+  &:last-of-type {
+    // margin-bottom: 100%;
   }
 
   img {

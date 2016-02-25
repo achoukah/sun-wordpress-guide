@@ -103,6 +103,7 @@ em {
 
 hgroup {
   order: 0;
+  column-span: all;
 
   @include mobile {
     padding: 0;
@@ -128,7 +129,6 @@ p {
   margin-bottom: 1em;
   line-height: 1.5;
 
-
   @include mobile {
     // padding: 0 3em;
   }
@@ -139,7 +139,7 @@ article {
     color: $rd-md;
     text-decoration: none;
     // display: block;
-    box-shadow: inset 0 -0.1em $rd-tr-5;
+    box-shadow: inset 0 -2px $rd-md;
     transition: all .2s ease-in-out;
     padding: 0.15em 0;
 

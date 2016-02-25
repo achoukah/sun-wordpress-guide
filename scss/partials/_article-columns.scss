@@ -2,11 +2,10 @@ section {
   padding-top: 1em;
 }
 article {
-  display: flex;
-  flex-flow: column wrap;
-  // flex-wrap: wrap;
-  justify-content: stretch;
-  align-content: stretch;
+  // display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   border-top: medium solid $bk-tr-5;
   margin: 3em auto 1em;
@@ -15,34 +14,28 @@ article {
 
   width: calc(100vw - 10em);
   max-width: 1200px;
+  // max-height: 800px;
 
-  min-height: 100vh;
-  max-height: 200vh;
+  column-count: 2;
+  column-width: auto;
+  column-gap: 40px;
 
 
-  @include mobile {
+  @include tablet {
     width: calc(100vw);
+    display: flex;
   }
 
   > * {
-    width: 48%;
+    // width: 48%;
     // max-width: 48%;
     // min-width: 48%;
-
-
 
     @include mobile {
       padding: 0 2rem;
       width: 100vw;
       max-width: 100%;
       min-width: 100%;
-    }
-
-    &:not(figure):not(hgroup) {
-      border: medium dotted red;
-      // align-self: flex-end;
-      margin-left: auto;
-
     }
   }
 }

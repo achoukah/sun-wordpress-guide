@@ -1,9 +1,9 @@
 nav {
   position: fixed;
-  padding: 0.5em 1em;
+  // padding: 0 1em;
   width: 100vw;
   background-color: $wh-tr-8;
-  border-bottom: thick solid $rd-md;
+  // border-bottom: thick solid $rd-md;
   box-shadow: 0 -1em 2em 2em $bk-tr-2;
   z-index: 20;
   height: auto;
@@ -26,7 +26,7 @@ nav {
           display: block;
         }
 
-        + .navigation {
+        + #navigation {
 
 
           @include mobile {
@@ -56,7 +56,7 @@ nav {
         display: block;
       }
 
-      + .navigation {
+      + #navigation {
 
 
         @include mobile {
@@ -109,27 +109,39 @@ nav {
   li {
     // padding-left: 0.5em;
     font-weight: 400;
-    border-left: solid thin $bk-tr-1;
+    //
+    width: 100%;
+    border-bottom: 8px solid $rd-md;
 
 
     @include mobile {
       border: none;
     }
-
     &:first-child {
-      border: none;
+      // border: none;
     }
+    &.current {
+      border-bottom: 12px solid $rd-md;
+      // background: $wh-lt;
+      box-shadow: 0 0 1em $bk-tr-1;
+    }
+
   }
   a {
     color: $rd-md;
     text-decoration: none;
     box-shadow: none;
-    padding: 0.5em 1em;
+    padding: 1em;
     display: inline-block;
+    width: 100%;
+    border-left: solid thin $bk-tr-1;
+
+
 
     &:hover {
       box-shadow: none;
     }
+
   }
 }
 section {
