@@ -66,10 +66,18 @@
 
 // MIXINS - MEDIA QUERIES
 
-$mobile: 768px;
+$mobile: 666px;
+$tablet: 1024px;
+
 
 @mixin mobile {
   @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile + 1px}) and (max-width: #{$tablet}) {
     @content;
   }
 }

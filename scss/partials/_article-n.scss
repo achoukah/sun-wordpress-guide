@@ -13,15 +13,11 @@ article {
   padding: 2em 0 1em;
 
 
-  // Small screens
-  @media only screen
-  and (max-width: 50em) {
+
+  @include mobile {
     flex-direction: column;
+
   }
-
-
-
-
 
   > * {
     // flex: 1;
@@ -31,9 +27,8 @@ article {
     align-self: flex-start;
     align-content: stretch;
 
-    // Small screens
-    @media only screen
-    and (max-width: 50em) {
+
+    @include mobile {
       padding: 0 2rem;
       // width: 80vw;
     }

@@ -1,0 +1,32 @@
+section {
+  padding-top: 1em;
+}
+article {
+
+  border-top: medium solid $bk-tr-5;
+  margin: 3em auto 1em;
+  padding: 2em 0 1em;
+  position: relative;
+
+  width: calc(100vw - 10em);
+  max-width: 1200px;
+
+
+  @include mobile {
+    width: calc(100vw);
+
+  }
+
+  > * {
+    width: 48%;
+    max-width: 48%;
+    min-width: 48%;
+
+    @include mobile {
+      padding: 0 2rem;
+      width: 100vw;
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+}

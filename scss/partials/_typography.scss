@@ -102,7 +102,7 @@ em {
 }
 
 hgroup {
-
+  order: 0;
 
   @include mobile {
     padding: 0;
@@ -128,9 +128,8 @@ p {
   margin-bottom: 1em;
   line-height: 1.5;
 
-  // Small screens
-  @media only screen
-  and (max-width: 50em) {
+
+  @include mobile {
     // padding: 0 3em;
   }
 }

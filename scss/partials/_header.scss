@@ -6,12 +6,12 @@ header {
   background-image: url(https://unsplash.it/1000/800);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50%;
   position: relative;
   // border-bottom: 5em solid $bk-tr-3;
 
-  // Small screens
-  @media only screen
-  and (max-width: 50em) {
+
+  @include mobile {
     height: 100vh;
   }
 
@@ -24,9 +24,8 @@ header {
     top: 0;
     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0) 27%,rgba(0,0,0,0) 75%,rgba(0,0,0,1) 100%);
 
-    // Small screens
-    @media only screen
-    and (max-width: 50em) {
+
+    @include mobile {
       height: 100vh;
     }
     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0) 27%,rgba(0,0,0,0) 62%,rgba(0,0,0,1) 100%);

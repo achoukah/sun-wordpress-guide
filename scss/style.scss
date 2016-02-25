@@ -1,18 +1,14 @@
 @import 'partials/variables';
 @import 'partials/reset';
 
-// @import "grid-settings";
-
 @import 'partials/typography';
-
 @import 'partials/base';
+@import 'partials/structure';
+
 @import 'partials/header';
 @import 'partials/navigation';
-@import 'partials/structure';
-// @import 'partials/article';
-@import 'partials/article-n';
-// @import 'partials/article-grid';
+
+@import 'partials/article-flex';
 @import 'partials/images';
 @import 'partials/lists';
-@import 'partials/article';
 @import 'partials/footer';

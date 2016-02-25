@@ -8,9 +8,8 @@ nav {
   z-index: 20;
   height: auto;
 
-  // Small screens
-  @media only screen
-  and (max-width: 50em) {
+
+  @include mobile {
   background-color: $wh-lt;
   }
 
@@ -22,20 +21,24 @@ nav {
 
       + label {
 
-        // Small screens
-        @media only screen
-        and (max-width: 50em) {
+
+        @include mobile {
           display: block;
         }
 
         + .navigation {
 
-          // Small screens
-          @media only screen
-          and (max-width: 50em) {
+
+          @include mobile {
             overflow: scroll;
             min-height: 60vh;
-            max-height: auto;
+            max-height: 100vh;
+            opacity: 1;
+          }
+          @include tablet {
+            overflow: scroll;
+            min-height: 30vh;
+            max-height: 100vh;
             opacity: 1;
           }
         }
@@ -44,17 +47,27 @@ nav {
     + label {
       display: none;
 
-      // Small screens
-      @media only screen
-      and (max-width: 50em) {
+
+      @include mobile {
+        display: block;
+      }
+
+      @include tablet {
         display: block;
       }
 
       + .navigation {
 
-        // Small screens
-        @media only screen
-        and (max-width: 50em) {
+
+        @include mobile {
+          opacity: 0;
+          overflow: hidden;
+          min-height: 4em;
+          max-height: 4em;
+          display: block;
+          transition: all .2s ease-in-out;
+        }
+        @include tablet {
           opacity: 0;
           overflow: hidden;
           min-height: 4em;
@@ -85,9 +98,8 @@ nav {
     display: flex;
     justify-content: space-between;
 
-    // Small screens
-    @media only screen
-    and (max-width: 50em) {
+
+    @include mobile {
       display: block;
     }
 
@@ -99,9 +111,8 @@ nav {
     font-weight: 400;
     border-left: solid thin $bk-tr-1;
 
-    // Small screens
-    @media only screen
-    and (max-width: 50em) {
+
+    @include mobile {
       border: none;
     }
 
@@ -122,17 +133,9 @@ nav {
   }
 }
 section {
-  // Small screens
-  @media only screen
-  and (max-width: 50em) {
-    // min-width: 100%;
-    // min-height: 100%;
-    // background-color: #fff;
-    // position: relative;
-    // top: 0;
-    // bottom: 100%;
-    // left: 0;
-    // z-index: 1;
+
+  @include mobile {
+
   }
 }
 

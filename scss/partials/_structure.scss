@@ -1,42 +1,72 @@
 section {
-  // @include outer-container;
 
-  // Small screens
-  @media only screen
-  and (max-width: 50em) {
+  @include mobile {
 
   }
 
 }
 article {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   @include mobile {
+    order: 1;
+  }
+
+  hgroup {
+    order: 0;
+
+    @include mobile {
+      order: 1;
+    }
+  }
+
+  figure {
+    order: 0;
+
+    @include mobile {
+      order: 1;
+    }
+
+    &:last-of-type {
+      flex-break: after;
+    }
+  }
+  p, ul, ol {
+    order: 1;
+    align-self: baseline;
+
+    @include mobile {
+      order: 1;
+    }
   }
 }
 
 .backtotop {
-  width: 36px;
-  height: 36px;
+  width: 52px;
+  height: 64px;
   position: fixed;
   display: block;
-  right: 1em;
-  top: 5em;
+  right: 0em;
+  top: 10em;
   background-image: $sprite;
   background-repeat: no-repeat;
-  background-position: 50% -235px;
+  background-position: 48% -216px;
+  background-color: $wh-tr-6;
   z-index: 12;
   text-indent: -9999px;
   transition: all .5s ease-in-out;
+  border-radius: 0.3em 0 0 0.3em;
 
   &:hover {
-    top: 4.7em;
+    top: 9.75em;
   }
 
-  // Small screens
-  @media only screen
-  and (max-width: 50em) {
-    top: 8em;
+
+  @include mobile {
+    // top: 9.75em;
   }
 
   &:hover {

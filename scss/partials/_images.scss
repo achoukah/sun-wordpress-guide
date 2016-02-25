@@ -1,9 +1,6 @@
 figure {
   margin-bottom: 1em;
-  position: absolute;
-  padding: 6em 1em 0 0;
-
-  // height: 100%;
+  display: block;
 
   @include mobile {
     width: 100vw;
@@ -18,7 +15,7 @@ figure {
     clear: both;
   }
   &:nth-of-type(n+2) {
-    border: thin dashed red;
+    // border: thin dashed red;
     // position: relative;
     // top: 0;
   }
@@ -26,10 +23,9 @@ figure {
   img {
     display: block;
     width: 100%;
-    // Small screens
 
-    @media only screen
-    and (max-width: 50em) {
+
+    @include mobile {
       order: 0;
       width: 100vw;
     }
@@ -42,9 +38,8 @@ figure {
     padding: 0.5em 0.5em 0.75em;
     background-color: $bk-tr-1;
 
-    // Small screens
-    @media only screen
-    and (max-width: 50em) {
+
+    @include mobile {
       order: 0;
       width: 100vw;
     }
