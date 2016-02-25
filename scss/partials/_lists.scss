@@ -1,18 +1,14 @@
 article{
+
   ul {
     margin-bottom: 1em;
 
-    @include mobile {
-
-    }
-
     > li {
-
       &::before {
         content: '';
         display: inline-block;
-        width: 0.6em;
-        height: 0.6em;
+        width: 10px;
+        height: 10px;
         border-radius: 100%;
         margin-right: .5em;
         background-color: $rd-md;
@@ -20,44 +16,41 @@ article{
         top: -0.1em;
       }
     }
+  }
+  ol {
+    // padding: 1em;
+    margin-bottom: 1em;
+    counter-reset: li;
+    list-style: none;
+    position: relative;
+
+    @include mobile {
+      // padding: 0 3em;
+      width: 100vw;
     }
-    ol {
-      // padding: 1em;
-      margin-bottom: 1em;
-      counter-reset: li;
-      list-style: none;
-      position: relative;
-
-      @include mobile {
-        // padding: 0 3em;
-        width: 100vw;
-      }
-
-
 
     > li {
-      text-indent: 0;
       margin: 0 0 0.2em 0;
-      padding: 0.5em 0.5em 0.5em 2.5em;
+      padding: 0.5em 0.5em 0.5em 2.2em;
       position: relative;
-      background: $bk-tr-1;
+      // background: $bk-tr-1;
 
       &::before {
-        content:counter(li); /* Use the counter as content */
-        counter-increment:li; /* Increment the counter by 1 */
+        content: counter(li);
+        counter-increment: li;
         display: inline-block;
         width: 1.5em;
-        height: 100%;
+        // height: 100%;
         padding: 0.05em 0.2em;
         margin: 0 0.5em 0 0;
         text-align: center;
         color: $wh-lt;
-        background: $bk-tr-2;
-        border-left: medium solid $bk-dk;
+        background: $rd-md;
+        // border-left: medium solid $bk-dk;
         border-right: medium solid transparent;
         position: absolute;
         left: 0em;
-        top: 0em;
+        top: 0.5em;
       }
       &:nth-child(even) {
 
